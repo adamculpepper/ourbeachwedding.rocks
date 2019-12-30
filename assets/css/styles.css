@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+
+/* Globals */
+/*html {overflow-y:scroll;}*/
+html, body {height:100%;}
+body {
+	display:flex;
+	flex-direction:column;
+	font-family:'Roboto', sans-serif;
+	color:#222;
+	background-color:#f5f5f5;
+	background-image:url(../img/bg-body.jpg);
+	background-position:center center;
+	background-size:cover;
+}
+
+a, button {transition:all 0.50s;}
+a:hover {text-decoration:none;}
+label {font-weight:700;}
+label,
+input[type='text'],
+input[type='email'] {width:100%;}
+.hidden {display:none;}
+.disabled {cursor:not-allowed!important;}
+.red {background:lightsalmon!important;}
+.blue {background:lightblue!important;}
+.green {background:lightgreen!important;}
+
+/* ------------------------------ */
+
+/* Bootstrap Resets */
+#content > .container,
+#content > .container > .row,
+#content > .container > .row > [class*='col-'] {height:100%; border:2px solid red;}
+/*u {text-decoration:none; border-bottom:2px solid #f00;}*/
+
+.card {background-color:rgba(255, 255, 255, 0.5); border-radius:0; border:0;}
+
+.card .card-body {font-weight:400;}
+
+
+
+
+
+/* ------------------------------ */
+
+/* Content Styles */
+
+
+
+
+#content {flex:1 0 auto;}
+
+/* ------------------------------ */
+
+/* Scrollbar Styles */
+::-webkit-scrollbar			{background-color:#ddd; width:10px;}
+::-webkit-scrollbar-track	{background-color:#ddd;}
+::-webkit-scrollbar-thumb	{background-color:#aaa;}
+::-webkit-scrollbar-button	{display:none;}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Add-on: Bootstrap 4, hidden-{breakpoint}-{up/down} */
+/* taken from Bootstrap 4, alpha 6 */
+.hidden-xs-up {display:none!important;}
+@media (max-width:575px)	{ .hidden-xs-down	{display:none!important;} }
+@media (min-width:576px)	{ .hidden-sm-up		{display:none!important;} }
+@media (max-width:767px)	{ .hidden-sm-down	{display:none!important;} }
+@media (min-width:768px)	{ .hidden-md-up		{display:none!important;} }
+@media (max-width:991px)	{ .hidden-md-down	{display:none!important;} }
+@media (min-width:992px)	{ .hidden-lg-up		{display:none!important;} }
+@media (max-width:1199px)	{ .hidden-lg-down	{display:none!important;} }
+@media (min-width:1200px)	{ .hidden-xl-up		{display:none!important;} }
+.hidden-xl-down {display:none!important;}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Add-on: Bootstrap 4, hidden-{breakpoint} */
+/* taken from Bootstrap 3.3.6, converted to Bootstrap 4 */
+@media (max-width:575px)	{ .hidden-xs {display:none!important;} }
+@media (min-width:576px) and (max-width:767px)	{ .hidden-sm {display:none!important;} }
+@media (min-width:768px) and (max-width:991px)	{ .hidden-md {display:none!important;} }
+@media (min-width:992px) and (max-width:1199px)	{ .hidden-lg {display:none!important;} }
+@media (min-width:1200px)	{ .hidden-xl {display:none!important;} }
+
+/* ------------------------------ */
+
+/* Animated Content Loader */
+.loading-spinner {
+	pointer-events:none;
+	position:relative;
+	cursor:default;
+	-webkit-user-select:none;
+		-ms-user-select:none;
+			user-select:none;
+}
+
+.loading-spinner:after,
+.loading-spinner:before {
+	position:absolute;
+	display:block;
+	content:'';
+}
+
+.loading-spinner:before {
+	z-index:1000;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(255,255,255,.8);
+}
+
+.loading-spinner:after {
+	z-index:1001;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	width:100px;
+	height:100px;
+	margin:-50px 0 0 -50px;
+	-webkit-animation:form-spin .6s linear;
+	animation:form-spin .6s linear;
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+	border-width:20px;
+	border-style:solid;
+	border-color:#767676 rgba(0,0,0,.1) rgba(0,0,0,.1);
+	border-radius:999px;
+}
+
+.loading-spinner-inverted:before {background:rgba(0,0,0,.45);}
+.loading-spinner-inverted:after {border-color:#ccc rgba(255,255,255,.2) rgba(255,255,255,.2);}
+
+@-webkit-keyframes form-spin {
+	from {
+		-webkit-transform:rotate(0);
+		transform:rotate(0)
+	}
+	to {
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
+}
+
+@keyframes form-spin {
+	from {
+		-webkit-transform:rotate(0);
+		transform:rotate(0)
+	}
+	to {
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
+}
