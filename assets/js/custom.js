@@ -2,7 +2,7 @@
 // https://github.com/ourbeachwedding.rocks
 
 $(function() {
-	$('#rsvp-form').modal('show');
+	//$('#rsvp-form').modal('show');
 
 	$('#rsvp-form form').submit(function(e) {
 		e.preventDefault();
