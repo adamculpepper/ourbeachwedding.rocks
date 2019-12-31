@@ -9,6 +9,8 @@ $(function() {
 
 		var form = $(this);
 		var btn = form.find('[type=submit]');
+		var attendingValue = $('#attending-ghost').is(":checked");
+		$('#attending').val(attendingValue);
 
 		if ($("input[name='email']").val() === '') {
 			alert('Please enter an email address')

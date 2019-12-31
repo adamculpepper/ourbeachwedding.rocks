@@ -13,7 +13,7 @@
 		<!-- styles -->
 		<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="./assets/css/fontawesome-all.min.css">
-		<link rel="stylesheet" href="./assets/css/stylish-select.css">
+		<link rel="stylesheet" href="./assets/css/toggle-switchy.css">
 		<link rel="stylesheet" href="./assets/css/styles.css">
 
 		<!-- open graph meta -->
@@ -115,25 +115,31 @@
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label for="something">Your Name</label>
-										<input type="text" id="name" name="name" class="form-control">
+										<input required type="text" id="name" name="name" class="form-control">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label for="something">Phone Number</label>
-										<input type="text" id="phone" name="phone" class="form-control">
+										<input required type="text" id="phone" name="phone" class="form-control">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label for="something">Email Address</label>
-										<input type="email" id="email" name="email" class="form-control">
+										<input required type="email" id="email" name="email" class="form-control">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label for="something">Attending</label>
-										<input type="text" id="attending" name="attending" class="form-control">
+										<div class="toggle-switchy">
+											<input type="hidden" id="attending" name="attending">
+											<input checked="checked" type="checkbox" id="attending-ghost">
+											<label for="attending-ghost">
+												<span class="toggle"></span>
+											</label>
+										</div>
 									</div>
 								</div>
 								<div class="col-12">
