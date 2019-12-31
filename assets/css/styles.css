@@ -1,22 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700,900&display=swap');
+@font-face {
+	font-family: 'Radiant';
+	src: url('../fonts/radiant-webfont.woff2') format('woff2'),
+		url('../fonts/radiant-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
 /* Globals */
-/*html {overflow-y:scroll;}*/
+html {overflow-y:scroll; overflow-x:hidden;}
 html, body {height:100%;}
 body {
 	display:flex;
 	flex-direction:column;
-	font-family:'Roboto', sans-serif;
+	font-family:'Montserrat', sans-serif;
 	color:#222;
 	background-color:#f5f5f5;
 	background-image:url(../img/bg-body.jpg);
 	background-position:center center;
 	background-size:cover;
+	background-attachment:fixed;
 }
 
 a, button {transition:all 0.50s;}
 a:hover {text-decoration:none;}
-label {font-weight:700;}
 label,
 input[type='text'],
 input[type='email'] {width:100%;}
@@ -29,27 +36,79 @@ input[type='email'] {width:100%;}
 /* ------------------------------ */
 
 /* Bootstrap Resets */
-#content > .container,
-#content > .container > .row,
-#content > .container > .row > [class*='col-'] {height:100%; border:2px solid red;}
-/*u {text-decoration:none; border-bottom:2px solid #f00;}*/
 
-.card {background-color:rgba(255, 255, 255, 0.5); border-radius:0; border:0;}
-
-.card .card-body {font-weight:400;}
-
-
-
-
+.btn {border:0; color:#fff; text-transform:uppercase; border-radius:0; letter-spacing:1px;}
+.btn-primary {background-color:#5ac0c7;}
+.btn-primary:hover {background-color:#55ccd4; border-color:#fff;}
 
 /* ------------------------------ */
 
 /* Content Styles */
-
-
-
+body.modal-open #content {backdrop-filter:blur(4px); filter:blur(4px);}
 
 #content {flex:1 0 auto;}
+
+#content > .container2,
+#content > .container2 > .row,
+#content > .container2 > .row > [class*='col-'],
+#content > .container2 > .row > [class*='col-'] > .details {height:100%;}
+
+.details {letter-spacing:1px; color:#fff; font-size:20px; background-color:rgba(0, 0, 0, 0.20); padding:30px 30px 50px 30px;}
+.details .row.line [class*='col-'] {position:relative; margin-bottom:20px; padding-bottom:20px;}
+.details .row.line [class*='col-']:after {content:''; position:absolute; left:0; border-bottom:1px solid #fff; width:100%; height:1px; padding-bottom:20px;}
+.details .label {font-weight:700; letter-spacing:1.5px;}
+
+.details a:not(.btn) {color:#fff; border-bottom:1px dashed rgba(255, 255, 255, 0.8);}
+
+.details .invite-header {text-align:center; margin-bottom:50px;}
+
+.details .rsvp-form .btn {font-size:30px; font-weight:700; border:10px solid rgba(255, 255, 255, 0.7);}
+.details .rsvp-form .btn:hover {background-color:#55ccd4; border-color:#fff;}
+
+.modal form {}
+.modal form label {margin-bottom:0; font-weight:700;}
+.modal form input {}
+.modal form textarea {width:100%;}
+.modal form #beach {display:none;}
+
+.modal form .form-control {border-radius:0;}
+
+.modal .modal-header,
+.modal .modal-footer {background-color:rgba(0, 0, 0, 0.10);}
+.modal .modal-content {background-color:rgba(255, 255, 255, 0.95);}
+
+.modal .close {text-shadow:none;}
+
+
+/* ------------------------------ */
+
+/* Bootstrap Breakpoints */
+
+/* Small (sm) and up*/
+@media (min-width:576px) {
+
+}
+
+
+/* Medium (md) and up */
+@media (min-width:768px) {
+
+}
+
+/* Large (lg) and up */
+@media (min-width:992px) {
+	.details .row.line:after {content:''; background:#fff; width:100%; height:1px; margin:20px 15px;}
+
+	.details .row.line [class*='col-'] {margin-bottom:0; padding-bottom:0;}
+	.details .row.line [class*='col-']:after {display:none;}
+
+	.details .row.line.last:after {height:0;}
+}
+
+/* Extra Large (xl) and up */
+@media (min-width:1200px) {
+
+}
 
 /* ------------------------------ */
 

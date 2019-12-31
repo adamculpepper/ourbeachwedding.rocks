@@ -30,46 +30,101 @@
 
 		<div id="content" class="loading-spinner2 loading-spinner-inverted center-to-window">
 
-			<div class="container">
+			<div class="container2">
 				<div class="row">
-					<div class="col-6 p-0 hidden-sm-down">left side</div>
-					<div class="col-6 p-0">
+					<div class="col-sm-6 pr-sm-0 ml-auto">
 						
-						<div class="card">
-							<div class="card-body p-3">
-								Adam & Amanda<br>
-								Invites you
-
-								<br><br>
-
-								02/02/2020 @ 4:00pm
-
-								<br><br>
-
-								312 Ariola Dr.<br>
-								Pensacola Beach, FL 32561
-
-								<br><br>
-
-								The <b>dress code</b> is beach semi-formal, but since our wedding is on the beach and may be cold that day, <u>please dress warm</u>.
-
-								<br><br>
-
-								Registered at: ???
-
-								<br><br>
-
-								hotel blocks: ???
-
-								<br><br>
-
-								RSVP form
-
-								<br><br>
 
 
+
+
+						<div class="details">
+
+							<div class="row">
+								<div class="col-lg-10 col-xl-9 mx-auto">
+
+									<div class="row">
+										<div class="col-12">
+											<div class="invite-header">
+												<img src="./assets/img/header.svg" width="100%">
+											</div>
+										</div>
+									</div>
+
+
+									<div class="row line">
+										<div class="col-lg-6">
+											<div class="label">Date</div>
+											<div class="value">02/02/2020</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="label">Time</div>
+											<div class="value">4:00pm CST</div>
+										</div>
+									</div>
+
+									<div class="row line">
+										<div class="col-lg-6">
+											<div class="label">Location</div>
+											<div class="value">
+												312 Ariola Dr.<br>
+												Pensacola Beach, FL 32561
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="item">
+												<div class="label">Parking</div>
+												<div class="value">
+													Coming soon.
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row line last">
+										<div class="col-lg-6">
+											<div class="item">
+												<div class="label">Dress Code</div>
+												<div class="value">
+													Beach semi-formal<br>(please dress warm)
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="label">Registered</div>
+											<div class="value">
+												<a target="registry" href="https://smile.amazon.com/wedding/share/pandasynth">Amazon</a>, Sur La Table, <a target="registry" href="https://bedbathandbeyond.com/store/giftregistry/viewregistryguest/547601182?eventType=Wedding">Bed, Bath & Beyond</a>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="row line last hidden">
+										<div class="col-lg-6">
+											<div class="item">
+												<div class="label">Hotel Block</div>
+												<div class="value">
+													Coming soon.
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="row rsvp-form">
+										<div class="col-12">
+											<button type="button" data-toggle="modal" data-target="#rsvp-form" class="btn btn-primary btn-lg btn-block py-3">RSVP form</a>
+										</div>
+									</div>
+
+
+								</div>
 							</div>
+
 						</div>
+
+
+
 
 					</div>
 				</div>
@@ -83,17 +138,80 @@
 
 
 
+
+
+
+
+
+
+
+		<div class="modal fade show" id="rsvp-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<form method="post" action="https://formbucket.com/f/buk_J4iwa9Otpe6vfD4u0E8PbAnH">
+						<input type="text" id="beach" name="beach">
+
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">RSVP Form</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">
+									<i class="fas fa-times"></i>
+								</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div id="rsvp-success" class="alert alert-success hidden">Thanks for RSVP'ing. We'll be in touch shortly with more information.</div>
+							<div id="rsvp-fields" class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="something">Your Name</label>
+										<input type="text" id="name" name="name" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="something">Phone Number</label>
+										<input type="text" id="phone" name="phone" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="something">Email Address</label>
+										<input type="email" id="email" name="email" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="something">Attending</label>
+										<input type="text" id="attending" name="attending" class="form-control">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group mb-0">
+										<label for="something">Guest Names (one per line)</label>
+										<textarea name="guests" rows="4" placeholder="Guest 1&#13;&#10;Guest 2&#13;&#10;Guest 3"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
 		<script src="./assets/js/jquery.min.js"></script>
 		<script src="./assets/js/bootstrap.min.js"></script>
-		<script src="./assets/js/stylish-select.js"></script>
 		<script src="./assets/js/custom.js"></script>
-		<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWP7daDxTYgERlGe_E9Ne16204qRcPEPA"></script> -->
-		<!-- <script async src="https://googletagmanager.com/gtag/js?id=UA-450952-11"></script> -->
+		<script async src="https://googletagmanager.com/gtag/js?id=UA-450952-12"></script>
 		<script>
-			// window.dataLayer = window.dataLayer || [];
-			// function gtag(){dataLayer.push(arguments);}
-			// gtag('js', new Date());
-			//gtag('config', 'UA-450952-11');
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-450952-12');
 		</script>
 	</body>
 </html>
