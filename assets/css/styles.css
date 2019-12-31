@@ -39,6 +39,7 @@ input[type='email'] {width:100%;}
 
 /* Bootstrap Resets */
 .btn {border:0; color:#fff; text-transform:uppercase; border-radius:0; letter-spacing:1px;}
+.btn:focus {border-color:inherit; -webkit-box-shadow:none; box-shadow:none;} /* yea, I know, don't do this */
 
 .btn-primary {background-color:#5ac0c7;}
 .btn-primary:hover {background-color:#55ccd4; border-color:#fff;}
