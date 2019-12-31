@@ -58,14 +58,14 @@ body.modal-open #content {backdrop-filter:blur(4px); filter:blur(4px);}
 #content > .container2 > .row > [class*='col-'],
 #content > .container2 > .row > [class*='col-'] > .details {height:100%;}
 
-.details {letter-spacing:1px; color:#fff; font-size:20px; background-color:rgba(0, 0, 0, 0.20); padding:30px 30px 50px 30px;}
+.details {letter-spacing:1px; color:#fff; font-size:20px; background-color:rgba(0, 0, 0, 0.20); padding:50px 30px;}
 .details .row.line [class*='col-'] {position:relative; margin-bottom:20px; padding-bottom:20px;}
 .details .row.line [class*='col-']:after {content:''; position:absolute; left:0; border-bottom:1px solid #fff; width:100%; height:1px; padding-bottom:20px;}
 .details .label {font-weight:700; letter-spacing:1.5px;}
 
 .details a:not(.btn) {color:#fff; border-bottom:1px dashed rgba(255, 255, 255, 0.8);}
 
-.details .invite-header {text-align:center; margin-bottom:50px;}
+.details .invite-header {text-align:center; margin-bottom:70px;}
 
 .details .rsvp-form .btn {font-size:30px; font-weight:700; border:10px solid rgba(255, 255, 255, 0.7);}
 .details .rsvp-form .btn:hover {background-color:#55ccd4; border-color:#fff;}
